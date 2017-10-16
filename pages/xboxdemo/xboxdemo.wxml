@@ -2,23 +2,35 @@
 <view class="container">
 
   <!-- 轮播图 -->
-  <image class="img" src="{{netData.testImgSrc}}"></image>
+  <swiper indicator-dots="true" autoplay="true" interval="{{netData.banner.interval}}" indicator-color="rgba(255, 255, 255, .7)" indicator-active-color="#ffffff">
+    <block wx:for="{{netData.banner.list}}" wx:key="index">
+      <swiper-item>
+        <image src="{{item.imgSrc}}" class="slide-image" width="355" height="150" />
+      </swiper-item>
+    </block>
+  </swiper>
 
-  <!-- 大段文字 -->
-  <text>{{netData.firstText}}</text>
+  <!-- 富文本 -->
+  <rich-text class='xboxdemo-rich-text' nodes="{{netData.richTextNodes}}"></rich-text>
+
+  <!-- 分隔 -->
+  <view class='gap'></view>
 
   <!-- 行 -->
-  <view wx:for="{{netData.lines}}" wx:key="index">
-    <!-- 图标 -->
-    <image class="xboxdemo-line-icon" src="{{item.iconSrc}}"></image>
-    <!-- 左侧文字 -->
-    <text>{{item.textLeft}}</text>
+  <view class='xboxdemo-line-item' wx:for="{{netData.lines}}" wx:key="index">
+    <!-- 左侧 -->
+    <view>
+      <!-- 图标 -->
+      <image class="xboxdemo-line-icon" src="{{item.iconSrc}}"></image>
+      <!-- 左侧文字 -->
+      <text>{{item.textLeft}}</text>
+    </view>
     <!-- 右侧文字 -->
     <text>{{item.textRight}}</text>
   </view>
 
   <!-- 最新咨询 -->
-  <view>{{netData.news.label}}</view>
+  <view class='xboxdemo-news-label'>{{netData.news.label}}</view>
   <!-- 项 -->
   <view class="xboxdemo-news-item" wx:for="{{netData.news.list}}" wx:key="index">
     <!-- 图片 -->

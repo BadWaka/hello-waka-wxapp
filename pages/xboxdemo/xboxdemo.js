@@ -5,17 +5,39 @@ Page({
   data: {
     // 网络数据
     netData: {
-      testImgSrc: 'http://img5.imgtn.bdimg.com/it/u=2005158732,1244864729&fm=11&gp=0.jpg',
       // 轮播图
-      banners: [{
-        imgSrc: '',
-      }, {
-        imgSrc: '',
-      }, {
-        imgSrc: '',
-      }],
+      banner: {
+        interval: 3000,
+        list: [
+          {
+            imgSrc: 'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=306909169,3063192169&fm=11&gp=0.jpg',
+          }, {
+            imgSrc: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=668201338,186087245&fm=27&gp=0.jpg',
+          }, {
+            imgSrc: 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=250022733,635522919&fm=27&gp=0.jpg',
+          }
+        ]
+      },
       // 第一段文字
-      firstText: '《魔兽世界》（World of Warcraft）是由著名游戏公司暴雪娱乐所制作的第一款网络游戏，属于大型多人在线角色扮演游戏。游戏以该公司出品的即时战略游戏《魔兽争霸》的剧情为历史背景，依托魔兽争霸的历史事件和英雄人物，魔兽世界有着完整的历史背景时间线。玩家在魔兽世界中冒险、完成任务、新的历险、探索未知的世界、征服怪物等。',
+      richTextNodes: [{
+        name: 'span',
+        attrs: {
+          style: 'color: #FBB43F;'
+        },
+        children: [{
+          type: 'text',
+          text: '优享生活（北京）科技有限公司',
+        }]
+      }, {
+        name: 'span',
+        attrs: {
+          style: ''
+        },
+        children: [{
+          type: 'text',
+          text: '成立于2015年6月成立于2015年6月成立于2015年6月成立于2015年6月成立于2015年6月成立于2015年6月成立于2015年6月成立于2015年6月成立于2015年6月成立于2015年6月成立于2015年6月成立于2015年6月成立于2015年6月成立于20',
+        }]
+      },],
       // 行
       lines: [
         {

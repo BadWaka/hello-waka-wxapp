@@ -1,4 +1,11 @@
 /**app.wxss**/
-.container {
 
-} 
+.container {
+}
+
+/* 分隔 */
+
+.gap {
+  height: 10px;
+  background: #eee;
+}
