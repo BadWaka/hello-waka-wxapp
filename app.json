@@ -1,13 +1,31 @@
 {
-  "pages":[
+  "pages": [
     "pages/xboxdemo/xboxdemo",
     "pages/index/index",
     "pages/logs/logs"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
-  }
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/xboxdemo/xboxdemo",
+        "text": "X盒子",
+        "iconPath": "./res/favorite_128px_1170778_easyicon.net.png",
+        "selectedIconPath": "./res/location_128px_1170783_easyicon.net.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./res/favorite_128px_1170778_easyicon.net.png",
+        "selectedIconPath": "./res/location_128px_1170783_easyicon.net.png"
+      }
+    ]
+  },
+  "debug": true
 }
