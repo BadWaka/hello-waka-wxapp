@@ -1,6 +1,39 @@
 <!--index.wxml-->
 <view class="container">
-  xboxdemo
-  {{imgSrc}}
-  <image class="img" src="{{imgSrc}}"></image>
+
+  <!-- 轮播图 -->
+  <image class="img" src="{{netData.testImgSrc}}"></image>
+
+  <!-- 大段文字 -->
+  <text>{{netData.firstText}}</text>
+
+  <!-- 行 -->
+  <view wx:for="{{netData.lines}}" wx:key="index">
+    <!-- 图标 -->
+    <image class="xboxdemo-line-icon" src="{{item.iconSrc}}"></image>
+    <!-- 左侧文字 -->
+    <text>{{item.textLeft}}</text>
+    <!-- 右侧文字 -->
+    <text>{{item.textRight}}</text>
+  </view>
+
+  <!-- 最新咨询 -->
+  <view>{{netData.news.label}}</view>
+  <!-- 项 -->
+  <view class="xboxdemo-news-item" wx:for="{{netData.news.list}}" wx:key="index">
+    <!-- 图片 -->
+    <image class="xboxdemo-news-item-img" src="{{item.imgSrc}}"></image>
+    <!-- 右侧 -->
+    <view class='xboxdemo-news-item-right'>
+      <!-- 标题 -->
+      <text class='xboxdemo-news-item-title'>{{item.title}}</text>
+      <!-- 第二行 -->
+      <view class='xboxdemo-news-item-row2'>
+        <!-- 左侧文字 -->
+        <text>{{item.row2Left}}</text>
+        <!-- 右侧文字 -->
+        <text>{{item.row2Right}}</text>
+      </view>
+    </view>
+  </view>
 </view>
