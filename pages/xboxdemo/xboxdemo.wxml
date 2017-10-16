@@ -1,0 +1,6 @@
+<!--index.wxml-->
+<view class="container">
+  xboxdemo
+  {{imgSrc}}
+  <image class="img" src="{{imgSrc}}"></image>
+</view>
