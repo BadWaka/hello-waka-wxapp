@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/xboxdemo/xboxdemo",
     "pages/index/index",
+    "pages/xboxdemo/xboxdemo",
+    
     "pages/logs/logs"
   ],
   "window": {
@@ -21,7 +22,7 @@
       },
       {
         "pagePath": "pages/index/index",
-        "text": "首页",
+        "text": "产品及解决方案",
         "iconPath": "./res/favorite_128px_1170778_easyicon.net.png",
         "selectedIconPath": "./res/location_128px_1170783_easyicon.net.png"
       }
